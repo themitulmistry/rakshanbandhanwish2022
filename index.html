@@ -563,49 +563,7 @@ var x = setInterval(function() {
  <b style="font-size: 20px;">Facebook</b>  
  </a>
 </center>
-     <style>
-
-    @font-face {
-      font-family: ThirstyScriptExtraBoldDemo;
-      src: url("ThirstyScriptExtraBoldDemo.otf") format("opentype");
-    }
-
-.fingerprint-wrap{
-  background-color: blue;
-  background-image: url(https://2.bp.blogspot.com/-cnii9bgGYMU/W2xT4onDATI/AAAAAAAABps/YA6bo25Qy6EaMS6cIgyqQKe5Wp3LsmUMQCLcBGAs/s1600/RakshaBandhan.jpg);
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  height: 100%;
-  text-align: center;
-  z-index: 99999999;
-  background-size: cover;
-}
-.fingerprint-wrap img{
-  position: absolute;
-  bottom: 70px;
-  left: calc( 50% - 75px);
-  width: 150px;
-   
-
-}
-
-.fingerprint-wrap p{
-  text-align: center;
-  margin-top: 50%;
-  color: white;
-  font-size: 20px;
-  padding: 10px;
-  font-family: 'Garamond';
- 
-}
-
-@media only screen and (min-width: 786px) {
-  .fingerprint-wrap{
-    display: none;
-  } 
-}
+<style>
 
 #snackbar {
     visibility: hidden; /* Hidden by default. Visible on click */
@@ -655,80 +613,6 @@ However, delay the fade out process for 2.5 seconds */
 }
 </style>
 
-<script>
-      $(function() {
-    if ( document.location.href.indexOf('home') > -1 ) {
-                 jQuery('.fingerprint-wrap').remove();
-             jQuery('body').css('max-height','inherit');
-              jQuery('#snackbar').remove();
-    }
-});
-</script>
-
-<script>
-      $(function() {
-    if ( document.location.href.indexOf('?n=') > -1 ) {
-                 jQuery('.fingerprint-wrap').remove();
-             jQuery('body').css('max-height','inherit');
-              jQuery('#snackbar').remove();
-    }
-});
-</script>
-
-
-
-<div id="snackbar"><script type="text/javascript" language="Javascript">
-                    
-                    document.write(a);
-                      </script> Please place your finger on scanner to see wish.</div>
-
-<script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
-
-
-<script src="https://5rsll2zigonexvkuxjdega-on.drv.tw/googlejs/wish/jquery.min.js"></script>
-<script type="text/javascript">
-    var divMouseDown;
-
-    function cAlert() {
-        // Get the snackbar DIV
-        var x = document.getElementById("snackbar");
-
-        // Add the "show" class to DIV
-        x.className = "show";
-
-        // After 3 seconds, remove the show class from DIV
-        setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
-    }
-
-
-
-    jQuery(document).bind( "mouseup touchstart", function(e){
-      if(e.target.className!="fingerprint"){
-        cAlert();
-        return;
-      }
-      window.oncontextmenu = function(event) {
-         event.preventDefault();
-         event.stopPropagation();
-         return false;
-      };
-        jQuery('.fingerprint').attr('src','fingerprint-anim.gif');
-          divMouseDown = setTimeout(function() { 
-            jQuery('.fingerprint-wrap').remove();
-             jQuery('body').css('max-height','inherit');
-              jQuery('#snackbar').remove();
-          }, 500);  
-    });
-    jQuery(document).bind( "mouseup touchend", function(e){
-      if(e.target.className!="fingerprint"){
-        return;
-      }
-      jQuery('.fingerprint').attr('src','fingerprint.png');
-       if (divMouseDown) {
-        clearTimeout(divMouseDown);
-       }
-    });
-</script>
 <style>
 input::placeholder {
   color: white;
